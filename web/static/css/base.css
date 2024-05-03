@@ -1,0 +1,28 @@
+
+h1{
+    color: Black;
+}
+
+.container {
+    background: white;
+    max-width: none;
+    width: 100%; /* Пример ограничения ширины контейнера */
+    margin: 0 auto; /* Центрирование контейнера по горизонтали */
+}
+
+.list-group {
+    background-color: #b39e56; /* Черный фон для элемента ul */
+    padding: 10px; /* Добавление отступов для элемента ul */
+    border-radius: 5px; /* Пример закругления углов */
+}
+
+.list-group-item {
+    background: black;
+    color: white; /* Белый текст для элемента li */
+    margin-bottom: 5px; /* Добавление отступов снизу для элементов li */
+}
+
+.list-group-item a {
+    color: white; /* Белый цвет ссылок внутри элементов li */
+    text-decoration: none; /* Удаление подчеркивания у ссылок */
+}

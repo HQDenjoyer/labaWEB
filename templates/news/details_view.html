@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block title %} {{ article.title }} {% endblock %}
+
+{% block content %}
+    <hr class="container">
+        <h1>{{ article.title }}</h1>
+        <p>{{ article.full_text }}</p>
+        {% if perms.news.delete_article %}
+            <a href="{% url 'news_delete' article.id %}" class="btn btn-danger">Удалить статью</a>
+        {% endif %}
+        {% if perms.news.change_article %}
+            <a href="{% url 'news_update' article.id %}" class="btn btn-info">Редактировать статью</a>
+        {% endif %}
+{% endblock %}

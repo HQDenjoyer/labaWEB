@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block title %} Новости {% endblock %}
+
+{% block content %}
+    <h1>Список статей</h1>
+    <hr class="container">
+    {% if news %}
+        {% for el in news  %}
+            <div class="alert alert-warning">
+                <h3><a href="{% url 'news_detail' el.id %}">{{ el.title }}</a></h3>
+                <p>{{ el.full_text }}</p>
+            </div>
+        {% endfor %}
+    {% else %}
+        <p>Статей пока нет.</p>
+    {% endif %}
+{% endblock %}
